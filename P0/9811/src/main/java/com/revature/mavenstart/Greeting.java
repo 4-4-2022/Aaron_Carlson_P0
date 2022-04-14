@@ -1,10 +1,13 @@
 package com.revature.mavenstart;
 
 
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+import com.revature.HomePageUI.AccountUI;
 import com.revature.UIwelcome.WelcomeUI;
+import com.revature.model.user.Username;
 
 public class Greeting {
 
@@ -29,21 +32,27 @@ public class Greeting {
 				System.out.println("Great Please Enter your User Name");
 				//Case1 additional options to be Created.
 				try {
-					userSelection = scanner.nextInt();
-			//Username database match code in class Username
-					
-					boolean validUser = true;
+					 String U = scanner.nextLine();
+					 System.out.println("Great Please Enter your Password");
+					 String P = scanner.nextLine();
+						 
+					 System.out.println("Checking validation.........");
 				
-				if(validUser = true) {
-					System.out.println("Please enter your Password");
-					
-				}
-				else validUser = false;
+				Username username = new Username();
 				
+				//if(U == username.getUser() && P == username.getPassword()){
+					System.out.println("login Successful");
+					scanner.nextLine();
+					AccountUI.AccountUI();
+				//}
+				//else 
+					//System.out.println("Username and password not found");
+				   // isUserDone = true;
 				}
 				catch(InputMismatchException e) {
 					System.out.println("Sorry, that username could not be found.");
 				}
+				
 				
 				break;
 			case 2:
