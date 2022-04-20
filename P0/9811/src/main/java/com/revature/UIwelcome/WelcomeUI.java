@@ -4,10 +4,10 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class WelcomeUI {
-	
+
 	public static int handleUserSelection(Scanner scanner) {
 		int userSelection = 0;
-	
+
 	try {
 		userSelection = scanner.nextInt();
 	}catch(InputMismatchException e) {
