@@ -7,16 +7,20 @@ import com.revature.model.Cupcake;
 import com.revature.model.user.Username;
 
 public class UserFailsafe implements UsernameInterface {
-	private Set<Username> usernames = new TreeSet<>();
+	public Set<Username> usernames = new TreeSet<>();
 	
-	// We're using this constructor to initialize some of the mock cupcakes.
+	
+	
 	public UserFailsafe() {
 		super();
+		
 		this.usernames.add(new Username("User1","Pass1", 2999, "Son1"));
 		this.usernames.add(new Username("User2", "Pass2", 204, "Daughter2"));
 		this.usernames.add(new Username("User3", "Pass3", 1, "Daughter3"));
 		this.usernames.add(new Username("User4", "Pass4", 200, "ThisGuy4"));
+		
 	}
+	
 	
 	
 

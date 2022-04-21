@@ -7,6 +7,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import com.revature.HomePageUI.AccountUI;
+import com.revature.HomePageUI.EmployeeUI;
 import com.revature.UIwelcome.WelcomeUI;
 import com.revature.connectdb.ConnectDb;
 import com.revature.model.user.Username;
@@ -16,11 +17,16 @@ import com.revature.repo.UsernameInterface;
 public class Greeting {
 
 
+	
+
+	public static String NewUser;
+	public static String u;
+
 	public static void main(String[] args) {
 
 
 
-		String Greet= "Greetings, customer. Welcome to Fysh Rewards Game Center.";
+		String Greet= "WELCOME!!!!!! Greetings, customer. Welcome to Fysh Rewards Game Center.";
 		String BeenHereBefore = "Please Select from the following options:" + "\n"+ " If you have an account Type the number '1'."
 				+ "\n"+ "Otherwise if you would like to set up an account with us please type the number '2'.";
 
@@ -38,8 +44,11 @@ public class Greeting {
 			case 1:
 				
 				System.out.println("Great Please Enter your User Name");
-			     String U = scanner.nextLine();
-			     
+			     u = scanner.nextLine();
+			     if(u == null) {
+			    	 u = "WELCOME";
+			     };
+			    	 
 			   try {
 
 					 System.out.println("Great Please Enter your Password");
@@ -68,7 +77,10 @@ public class Greeting {
 				System.out.println("Ok, Lets Get you signed up. Choose your username");
 				//Case2 options to be Created
 				
-					String NewUser = scanner.nextLine();
+					NewUser = scanner.nextLine();
+					if(NewUser ==null) {
+						NewUser = "WELCOME";
+					}
 					
 				try {
 				System.out.println("Choose a password");
@@ -87,16 +99,22 @@ public class Greeting {
 		
 			
 
-			}   
+			  
 	
 					
 				break;
-
+			case 3:
+				System.out.println("employee login");
+                scanner.nextLine();
+                EmployeeUI.EmployeeUI();
+                break;
+                
 			}
-		
+		System.out.println("coming soon");
+		Greeting.main(args);
 		scanner.close();
 			}
-	}
+	}}
 	
 		
 

@@ -24,7 +24,7 @@ public class ConnectDb {
                    */
 			System.out.println("Connected to the PostgreSQL server successfully.");
 			}catch(SQLException e) {
-				System.out.println("failed");
+				System.out.println("\n"+"                                  /////code1:db");
 			
 			}
             

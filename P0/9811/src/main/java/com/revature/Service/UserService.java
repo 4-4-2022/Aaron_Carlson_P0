@@ -13,14 +13,7 @@ import com.revature.repo.UserRepo;
 
 public class UserService {
 
-	/*
-	 * We have introduced Logback into our project in order to log events that occur in our application. We will log these events
-	 * to a file that we can refer to later to track the events that are occurring in our application. These events can include exceptions
-	 * that have been thrown, information about what types of data users have requested, and user transactions.
-	 * 
-	 * Because we used Maven to download the jar file for Logback and add it to our classpath, we already have access to Logback-specific
-	 * classes.
-	 */
+	
 	private static final Logger logger = LoggerFactory.getLogger(UserService.class);
 	
 	private UserRepo userRepo;

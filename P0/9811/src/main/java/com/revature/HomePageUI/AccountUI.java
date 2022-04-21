@@ -4,15 +4,16 @@ import java.util.Scanner;
 
 import com.revature.UIwelcome.WelcomeUI;
 import com.revature.fyshroom.Games;
+import com.revature.mavenstart.Greeting;
 import com.revature.model.user.Account;
 
 public class AccountUI {
 public static void AccountUI() {
 
-
-
+   
+    
 	Account account = new Account();
-	System.out.println("Hello (usernamehere) Here are your Homepage options, Select the number you wish to use" + "\n"+
+	System.out.println("Hello  " + (Greeting.u + "" +"\n"+ Greeting.NewUser + "")  + "\n"  +" Here are your Homepage options, Select the number you wish to use" + "\n"+
 	"1. Account balance and profile" + "\n"+
 	"2. Load/Withdraw balance" + "\n" +
 	"3. View your transactions" + "\n"+
@@ -30,6 +31,8 @@ public static void AccountUI() {
 
 		    	double eAcc = account.getAccountBalance();
 		    	System.out.println(""+ eAcc);
+		    	System.out.println("what do you want to do?");
+		    	ProfileUI.ProfileUI();
 
 		    break;
 		  case 2:
@@ -57,7 +60,7 @@ public static void AccountUI() {
 		  case 6: System.out.println("Rewards ");
 
 		    break;
-		  case 7: AccountUI.AccountUI();
+		  case 7: Greeting.main(null);
 		  default:
 			  System.out.println("Hello (usernamehere) Here are your Homepage options, Select the number you wish to use" + "\n"+
 						"1. Account balance and profile" + "\n"+
